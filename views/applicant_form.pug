@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+                h1.display-4.m-b-2 Sign Up
+
+                // register form
+                form(method='POST' action='/applications/new')
+                    div.form-group
+                        label(for='salutation') Salutation:
+                        input#salutation.form-control(type='text', placeholder='salutation' name='salutation')
+                    div.form-group
+                        label(for='name') Name:
+                        input#name.form-control(type='text', placeholder='first and last' name='name')
+                    div.form-group
+                        label(for='country') Country:
+                        input#country.form-control(type='country', placeholder='country' name='country')
+                    div.form-group
+                        label(for='gender') Gender:
+                        input#gender.form-control(type='gender', placeholder='M or F' name='gender')
+                    button.btn.btn-primary(type='submit') Sign up
